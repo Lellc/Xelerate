@@ -1,0 +1,381 @@
+/* GENERAL --------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  interpolate-size: allow-keywords;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Noto Sans", sans-serif;
+  color: #121212;
+}
+
+.heading-secondary {
+  font-size: 2.986rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.06rem;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.unordered-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.margin--4 {
+  margin-bottom: 4rem;
+}
+
+.orange-text {
+  color: #ff922b;
+}
+
+/* HERO ------------------------------------------------------ */
+
+.hero-section {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    url("imgs/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 25rem;
+  line-height: 0.39;
+  text-align: center;
+  letter-spacing: -33px;
+  transform: scaleY(0.6);
+  padding-top: 2.55rem;
+}
+
+.hero-button-container {
+  display: flex;
+  gap: 1.5rem;
+  width: 30rem;
+  padding-bottom: 2rem;
+}
+
+.hero-button:link,
+.hero-button:visited {
+  padding: 1rem;
+  font-size: 1.44rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+.hero-button:hover,
+.hero-bottom:active {
+  color: #ff922b;
+}
+
+.button--fill {
+  background-color: #fff;
+  color: #121212;
+  font-weight: 600;
+}
+
+.button--outline {
+  color: #fff;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* EXPLORE OUR LINEUP ---------------------------------------------- */
+
+.explore-lineup-section {
+  padding: 8rem;
+  background-color: #f4f4f4;
+}
+
+.cards-container-visible {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  margin-bottom: 4rem;
+  transition: all 2s ease;
+}
+
+.cards-container-hidden {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+
+  margin-bottom: 0rem;
+  transition: all 2s ease;
+}
+
+.cards-container-hidden .card {
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  height: 0;
+  transition: all 2s ease;
+}
+
+.shown .cards-container-visible {
+  margin-bottom: 2rem;
+}
+
+.shown .cards-container-hidden {
+  height: auto;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.shown .cards-container-hidden .card {
+  padding: 4rem;
+  border: 1px solid #ddd;
+  height: auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 4rem;
+  /* box-shadow: 0 0 24px rgba(0, 0, 0, 0.08); */
+  border: 1px solid #ddd;
+}
+
+.card-img {
+  margin-bottom: 3rem;
+}
+
+.card-heading {
+  font-size: 1.728rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card-description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.card-list-title {
+  font-weight: 500;
+}
+
+.card-list-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+.card-price-and-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card-price {
+  font-size: 1.728rem;
+  font-weight: 700;
+}
+
+.card-button:link,
+.card-button:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ff922b;
+  color: #121212;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.show-all-button {
+  display: block;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #121212;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  margin-inline: auto;
+  background: #fff;
+}
+
+.show-all-button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  translate: 0.25rem;
+}
+
+.show-all-icon {
+  font-size: 2.074rem;
+  color: #121212;
+  transition: all 2s ease;
+  translate: 0 0.125rem;
+}
+
+.flip {
+  rotate: 180deg;
+  translate: -0 -0.03rem;
+}
+
+/* ABOUT ----------------------------------------------------- */
+
+.about-section {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.about {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-block: 8.92rem;
+}
+
+.about-section .heading-secondary {
+  margin-bottom: 2.488rem;
+  font-weight: 800;
+}
+
+/* WHY XELERATE ---------------------------------------------- */
+
+.why-xelerate-section {
+  padding: 8rem;
+  background-color: #f4f4f4;
+}
+
+.why-xelerate-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 5rem;
+  max-width: 112rem;
+  margin-inline: auto;
+}
+
+.why-icon {
+  font-size: 2.074rem;
+  background-color: #ff922b;
+  padding: 1.5rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.why-icon--helmet {
+  scale: -1 1;
+}
+
+.why-xelerate-flex-container:last-child {
+  margin-bottom: 0;
+}
+
+.why-text {
+  padding: 0 4rem;
+  flex-basis: 50%;
+}
+
+.why-image-container {
+  flex: 1;
+  flex-basis: 50%;
+}
+
+/* FOOTER ---------------------------------------------------- */
+
+.footer {
+  padding: 8rem 5rem 5rem 5rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding-bottom: 8rem;
+}
+
+.footer-xelerate {
+  text-transform: uppercase;
+  font-size: 1.728rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.footer-moto {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.logo-container {
+  flex-direction: row;
+}
+
+.logo-container a {
+  color: #000;
+}
+
+.footer-copy {
+  border-top: #282828 1px solid;
+  padding-top: 5rem;
+  text-align: center;
+  color: #888;
+}
+
+.footer--unordered-list li {
+  color: #888;
+}
+
+.footer--unordered-list li a {
+  text-decoration: none;
+  color: #888;
+}
+
+.footer-icon {
+  color: #888;
+  font-size: 1.728rem;
+}
